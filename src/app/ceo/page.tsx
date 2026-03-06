@@ -12,7 +12,7 @@ export default function CEOPage() {
                         <div className={styles.imageSection}>
                             <div className={styles.imageFrame}>
                                 <Image
-                                    src="/images/ceo-cool.png"
+                                    src="/images/ceo.png"
                                     alt="Ian Otollo Marabi - CEO"
                                     fill
                                     className={styles.ceoImage}

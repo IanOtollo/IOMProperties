@@ -150,6 +150,24 @@
   line-height: 1.6;
 }
 
+.ceoTeaserImage {
+  position: relative;
+  height: 500px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background-color: #111;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.ceoTeaserImage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 30%);
+  pointer-events: none;
+}
+
 .amenitiesImageContainer {
   position: relative;
   height: 600px;

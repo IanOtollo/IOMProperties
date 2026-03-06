@@ -137,8 +137,7 @@ export default function Home() {
               <Image
                 src="/images/ceo.png"
                 alt="Ian Otollo Marabi"
-                width={400}
-                height={500}
+                fill
                 className={styles.teaserImg}
                 priority
               />
@@ -150,7 +149,7 @@ export default function Home() {
                 "At IOMProperties, we don't just sell homes. We deliver a standard
                 of excellence that honors your achievements."
               </p>
-              <Link href="/about#ceo" className={styles.teaserLink}>
+              <Link href="/ceo" className={styles.teaserLink}>
                 Meet Ian Otollo Marabi &rarr;
               </Link>
             </div>
