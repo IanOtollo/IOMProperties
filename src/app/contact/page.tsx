@@ -1,5 +1,47 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import styles from "./contact.module.css";
+import { Suspense } from "react";
+
+function ContactForm() {
+    const searchParams = useSearchParams();
+    const service = searchParams.get("service") || "";
+
+    return (
+        <form className={styles.form}>
+            <div className={styles.formRow}>
+                <div className={styles.formGroup}>
+                    <label>Full Name</label>
+                    <input type="text" placeholder="e.g. John Doe" required />
+                </div>
+                <div className={styles.formGroup}>
+                    <label>Email Address</label>
+                    <input type="email" placeholder="e.g. john@luxury.com" required />
+                </div>
+            </div>
+
+            <div className={styles.formGroup}>
+                <label>Service Required</label>
+                <select key={service} defaultValue={service}>
+                    <option value="" disabled>Select a service</option>
+                    <option value="acquisition">Property Acquisition</option>
+                    <option value="valuation">Portfolio Valuation</option>
+                    <option value="management">Estate Management</option>
+                    <option value="listing">List Your Property</option>
+                </select>
+            </div>
+
+            <div className={styles.formGroup}>
+                <label>Message</label>
+                <textarea rows={5} placeholder="Describe your requirements in detail..."></textarea>
+            </div>
+
+            <button type="submit" className={styles.submitBtn}>Submit Request</button>
+        </form>
+    );
+}
 
 export default function ContactPage() {
     return (
@@ -41,36 +83,9 @@ export default function ContactPage() {
 
                         <div className={styles.formContainer}>
                             <h2 className={styles.formTitle}>Private Consultation Request</h2>
-                            <form className={styles.form}>
-                                <div className={styles.formRow}>
-                                    <div className={styles.formGroup}>
-                                        <label>Full Name</label>
-                                        <input type="text" placeholder="e.g. John Doe" required />
-                                    </div>
-                                    <div className={styles.formGroup}>
-                                        <label>Email Address</label>
-                                        <input type="email" placeholder="e.g. john@luxury.com" required />
-                                    </div>
-                                </div>
-
-                                <div className={styles.formGroup}>
-                                    <label>Service Required</label>
-                                    <select defaultValue="">
-                                        <option value="" disabled>Select a service</option>
-                                        <option value="acquisition">Property Acquisition</option>
-                                        <option value="valuation">Portfolio Valuation</option>
-                                        <option value="management">Estate Management</option>
-                                        <option value="listing">List Your Property</option>
-                                    </select>
-                                </div>
-
-                                <div className={styles.formGroup}>
-                                    <label>Message</label>
-                                    <textarea rows={5} placeholder="Describe your requirements in detail..."></textarea>
-                                </div>
-
-                                <button type="submit" className={styles.submitBtn}>Submit Request</button>
-                            </form>
+                            <Suspense fallback={<div>Loading form...</div>}>
+                                <ContactForm />
+                            </Suspense>
                         </div>
                     </div>
                 </div>
