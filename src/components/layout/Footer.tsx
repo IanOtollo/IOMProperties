@@ -22,9 +22,9 @@ export default function Footer() {
 
                 <div className={styles.links}>
                     <h3>Services</h3>
-                    <Link href="/contact?service=consultation">Private Consultation</Link>
-                    <Link href="/contact?service=valuation">Property Valuation</Link>
-                    <Link href="/contact?service=management">Estate Management</Link>
+                    <Link href="/services/acquisition">Property Acquisitions</Link>
+                    <Link href="/services/valuation">Property Valuation</Link>
+                    <Link href="/services/management">Estate Management</Link>
                 </div>
 
                 <div className={styles.links}>

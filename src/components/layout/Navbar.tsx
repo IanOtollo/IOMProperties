@@ -44,9 +44,9 @@ export default function Navbar() {
             }}>
               <span>Services</span>
               <div className={styles.dropdownContent}>
-                <Link href="/contact?service=acquisition" onClick={() => isOpen && toggleMenu()}>Acquisitions</Link>
-                <Link href="/contact?service=valuation" onClick={() => isOpen && toggleMenu()}>Valuations</Link>
-                <Link href="/contact?service=management" onClick={() => isOpen && toggleMenu()}>Management</Link>
+                <Link href="/services/acquisition" onClick={() => isOpen && toggleMenu()}>Acquisitions</Link>
+                <Link href="/services/valuation" onClick={() => isOpen && toggleMenu()}>Valuations</Link>
+                <Link href="/services/management" onClick={() => isOpen && toggleMenu()}>Management</Link>
               </div>
             </div>
             <Link href="/about" onClick={() => isOpen && toggleMenu()}>Our Story</Link>
