@@ -1,0 +1,249 @@
+.container {
+    padding-bottom: var(--space-3xl);
+}
+
+/* Gallery Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 70vh;
+    min-height: 500px;
+    gap: 2px;
+    background-color: var(--bg-primary);
+}
+
+.mainImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mainImage {
+    object-fit: cover;
+    transition: transform 10s ease;
+}
+
+.mainImageWrapper:hover .mainImage {
+    transform: scale(1.05);
+}
+
+.thumbnailGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    height: 100%;
+}
+
+.thumbnailWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.thumbnail {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.thumbnailWrapper:hover .thumbnail {
+    transform: scale(1.05);
+}
+
+.morePhotos {
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    transition: background var(--transition-fast);
+}
+
+.morePhotos:hover {
+    background: rgba(30, 30, 30, 1);
+}
+
+/* Main Content Layout */
+.contentLayout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-3xl);
+    padding-top: var(--space-2xl);
+    align-items: start;
+}
+
+.location {
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.title {
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.price {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.specs {
+    display: flex;
+    gap: var(--space-2xl);
+    margin: var(--space-2xl) 0;
+    padding: var(--space-lg) 0;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.specBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.specLabel {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-xs);
+}
+
+.specValue {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.section {
+    margin-bottom: var(--space-2xl);
+}
+
+.section h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-md);
+    color: var(--accent-gold);
+}
+
+.description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.amenityList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    list-style: none;
+}
+
+.amenityList li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.amenityIcon {
+    color: var(--accent-gold);
+}
+
+/* Contact Sidebar */
+.sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.contactCard {
+    padding: var(--space-xl);
+    background: rgba(20, 20, 20, 0.7);
+    border: 1px solid var(--border-subtle);
+}
+
+.contactCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+    color: var(--accent-gold);
+}
+
+.contactCard p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.input,
+.textarea {
+    width: 100%;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    padding: 0.85rem 1rem;
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    outline: none;
+    transition: border var(--transition-fast);
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: var(--accent-gold);
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.disclaimer {
+    font-size: 0.75rem !important;
+    color: var(--text-muted) !important;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 1024px) {
+    .contentLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .thumbnailGrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .amenityList {
+        grid-template-columns: 1fr;
+    }
+}

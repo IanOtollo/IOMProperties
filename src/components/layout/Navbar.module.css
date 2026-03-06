@@ -1,0 +1,82 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--space-lg) 0;
+    z-index: 100;
+    transition: all var(--transition-normal);
+    border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent-gold);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-left: 0.2rem;
+    text-transform: uppercase;
+}
+
+.links {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.links a:not(.loginBtn)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-gold);
+    transition: width var(--transition-normal);
+}
+
+.links a:not(.loginBtn):hover::after {
+    width: 100%;
+}
+
+.loginBtn {
+    border: 1px solid var(--accent-gold);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    color: var(--accent-gold) !important;
+    transition: all var(--transition-fast);
+}
+
+.loginBtn:hover {
+    background-color: var(--accent-gold-muted);
+}
