@@ -174,22 +174,56 @@
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
-        max-width: 300px;
+        width: 100%;
         height: 100vh;
-        background: var(--bg-secondary);
+        background: var(--bg-primary);
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: var(--space-3xl) var(--space-xl);
         z-index: 1000;
-        transition: right var(--transition-normal);
-        border-left: 1px solid var(--border-subtle);
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        transition: transform var(--transition-normal);
+        border-left: none;
+        box-shadow: none;
     }
 
     .linksOpen {
-        right: 0;
+        transform: translateX(-100%);
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdownContent {
+        position: static;
+        display: none;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown:hover .dropdownContent {
+        display: block;
+    }
+
+    .dropdown span {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-primary);
+        display: block;
+        padding: var(--space-md) 0;
+    }
+
+    .dropdownContent a {
+        font-size: 1rem;
+        padding: var(--space-sm) 0;
+        color: var(--text-secondary);
     }
 
     .links a {
@@ -201,6 +235,7 @@
 
     .loginBtn {
         margin-top: var(--space-lg);
-        width: 100%;
+        width: auto;
+        padding: 0.8rem 2.5rem;
     }
 }

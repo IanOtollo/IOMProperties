@@ -46,43 +46,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className={styles.ceoSection} id="ceo">
-                <div className="container">
-                    <div className={styles.ceoGrid}>
-                        <div className={styles.ceoImageContainer}>
-                            <div className={styles.ceoImageWrapper}>
-                                <Image
-                                    src="/images/ceo.png"
-                                    alt="Ian Otollo Marabi - CEO"
-                                    fill
-                                    className={styles.ceoImage}
-                                    sizes="(max-width: 768px) 100vw, 400px"
-                                    priority
-                                />
-                            </div>
-                        </div>
-                        <div className={styles.ceoText}>
-                            <h2 className={styles.ceoTitle}>Meet Our CEO</h2>
-                            <h3 className={styles.ceoName}>Ian Otollo Marabi</h3>
-                            <div className={styles.auraDivider}></div>
-                            <blockquote className={styles.quote}>
-                                "Architecture is the silent witness to our existence. At IOMProperties, we ensure that witness is one of absolute luxury and uncompromising integrity."
-                            </blockquote>
-                            <p>
-                                With over a decade of experience in global real estate, Ian Otollo Marabi
-                                founded IOMProperties to redefine the high-end property market. His vision
-                                centers on the "IOM Standard"—a commitment to excellence that goes beyond
-                                the physical structure.
-                            </p>
-                            <div className={styles.signatureContainer}>
-                                <div className={styles.signature}>Ian Otollo Marabi</div>
-                                <p className={styles.signatureSub}>Founder & Chief Executive Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section className={styles.values}>
                 <div className="container">
                     <div className={styles.valuesGrid}>

@@ -16,7 +16,7 @@ export default function Footer() {
                     <h3>Explore</h3>
                     <Link href="/properties">All Properties</Link>
                     <Link href="/about">Our Story</Link>
-                    <Link href="/about#ceo">Meet the CEO</Link>
+                    <Link href="/ceo">The CEO</Link>
                     <Link href="/dashboard/client/builder">House Imaginator</Link>
                 </div>
 

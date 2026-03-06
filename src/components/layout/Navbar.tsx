@@ -36,7 +36,12 @@ export default function Navbar() {
 
           <div className={`${styles.links} ${isOpen ? styles.linksOpen : ""}`}>
             <Link href="/properties" onClick={() => isOpen && toggleMenu()}>Properties</Link>
-            <div className={styles.dropdown}>
+            <div className={styles.dropdown} onClick={(e) => {
+              if (window.innerWidth <= 768) {
+                const content = e.currentTarget.querySelector(`.${styles.dropdownContent}`) as HTMLElement;
+                if (content) content.style.display = content.style.display === 'block' ? 'none' : 'block';
+              }
+            }}>
               <span>Services</span>
               <div className={styles.dropdownContent}>
                 <Link href="/contact?service=acquisition" onClick={() => isOpen && toggleMenu()}>Acquisitions</Link>
@@ -45,7 +50,7 @@ export default function Navbar() {
               </div>
             </div>
             <Link href="/about" onClick={() => isOpen && toggleMenu()}>Our Story</Link>
-            <Link href="/about#ceo" onClick={() => isOpen && toggleMenu()}>The CEO</Link>
+            <Link href="/ceo" onClick={() => isOpen && toggleMenu()}>The CEO</Link>
             <Link href="/dashboard/client/builder" onClick={() => isOpen && toggleMenu()}>Imaginator</Link>
             <Link href="/contact" onClick={() => isOpen && toggleMenu()}>Contact</Link>
             <Link href="/auth/login" className={styles.loginBtn} onClick={() => isOpen && toggleMenu()}>
