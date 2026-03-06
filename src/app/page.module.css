@@ -152,7 +152,10 @@
 
 .ceoTeaserImage {
   position: relative;
-  height: 500px;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4 / 5;
+  margin: 0 auto;
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
@@ -164,8 +167,14 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 30%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 40%);
   pointer-events: none;
+}
+
+.teaserImg {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .amenitiesImageContainer {
