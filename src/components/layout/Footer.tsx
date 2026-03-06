@@ -16,14 +16,22 @@ export default function Footer() {
                     <h3>Explore</h3>
                     <Link href="/properties">All Properties</Link>
                     <Link href="/about">Our Story</Link>
-                    <Link href="/agents">Meet the Agents</Link>
+                    <Link href="/about#ceo">Meet the CEO</Link>
+                    <Link href="/dashboard/client/builder">House Imaginator</Link>
+                </div>
+
+                <div className={styles.links}>
+                    <h3>Services</h3>
+                    <Link href="/contact?service=consultation">Private Consultation</Link>
+                    <Link href="/contact?service=valuation">Property Valuation</Link>
+                    <Link href="/contact?service=management">Estate Management</Link>
                 </div>
 
                 <div className={styles.links}>
                     <h3>Legal</h3>
                     <Link href="/terms">Terms of Service</Link>
                     <Link href="/privacy">Privacy Policy</Link>
-                    <Link href="/contact">Contact Support</Link>
+                    <Link href="/contact">Support Centre</Link>
                 </div>
 
                 <div className={styles.newsletter}>

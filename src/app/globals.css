@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap');
 
 :root {
   /* Brand Colors - Dark Luxury Theme */
@@ -8,7 +8,7 @@
 
   --text-primary: #F3F4F6;
   --text-secondary: #9CA3AF;
-  --text-muted: #6B7280;
+  --text-muted: #6B7281;
 
   --accent-gold: #D4AF37;
   --accent-gold-hover: #F3E5AB;
@@ -16,10 +16,12 @@
 
   --border-subtle: rgba(255, 255, 255, 0.1);
   --border-strong: rgba(255, 255, 255, 0.2);
+  --border-stone: rgba(255, 255, 255, 0.05);
 
   /* Typography */
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
+  --font-signature: 'Great Vibes', cursive;
 
   /* Animations */
   --transition-fast: 150ms ease;

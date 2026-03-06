@@ -128,6 +128,35 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* CEO Teaser Section */}
+      <section className={styles.ceoSection}>
+        <div className="container">
+          <div className={styles.ceoTeaserGrid}>
+            <div className={styles.ceoTeaserImage}>
+              <Image
+                src="/images/ceo.png"
+                alt="Ian Otollo Marabi"
+                width={400}
+                height={500}
+                className={styles.teaserImg}
+                priority
+              />
+            </div>
+            <div className={styles.ceoTeaserText}>
+              <span className={styles.teaserLabel}>The IOM Vision</span>
+              <h2>A Word From Our CEO</h2>
+              <p>
+                "At IOMProperties, we don't just sell homes. We deliver a standard
+                of excellence that honors your achievements."
+              </p>
+              <Link href="/about#ceo" className={styles.teaserLink}>
+                Meet Ian Otollo Marabi &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

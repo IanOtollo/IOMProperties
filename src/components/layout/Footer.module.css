@@ -7,7 +7,7 @@
 
 .footerGrid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
     gap: var(--space-2xl);
     margin-bottom: var(--space-3xl);
 }

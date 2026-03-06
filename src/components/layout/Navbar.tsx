@@ -36,7 +36,17 @@ export default function Navbar() {
 
           <div className={`${styles.links} ${isOpen ? styles.linksOpen : ""}`}>
             <Link href="/properties" onClick={() => isOpen && toggleMenu()}>Properties</Link>
-            <Link href="/about" onClick={() => isOpen && toggleMenu()}>About Us</Link>
+            <div className={styles.dropdown}>
+              <span>Services</span>
+              <div className={styles.dropdownContent}>
+                <Link href="/contact?service=acquisition" onClick={() => isOpen && toggleMenu()}>Acquisitions</Link>
+                <Link href="/contact?service=valuation" onClick={() => isOpen && toggleMenu()}>Valuations</Link>
+                <Link href="/contact?service=management" onClick={() => isOpen && toggleMenu()}>Management</Link>
+              </div>
+            </div>
+            <Link href="/about" onClick={() => isOpen && toggleMenu()}>Our Story</Link>
+            <Link href="/about#ceo" onClick={() => isOpen && toggleMenu()}>The CEO</Link>
+            <Link href="/dashboard/client/builder" onClick={() => isOpen && toggleMenu()}>Imaginator</Link>
             <Link href="/contact" onClick={() => isOpen && toggleMenu()}>Contact</Link>
             <Link href="/auth/login" className={styles.loginBtn} onClick={() => isOpen && toggleMenu()}>
               Sign In
